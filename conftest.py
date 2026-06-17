@@ -1,12 +1,17 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 from pages.LoginPage import LoginPage
 from utils.config import BASE_URL
 
 @pytest.fixture()
 def driver():
-    driver = webdriver.Chrome()
+    options = Options()
+
+    options.add_argument("--guest")
+    options.add_argument("--lang=en")
+    driver = webdriver.Chrome(options=options)
     driver.maximize_window()
 
     yield driver
