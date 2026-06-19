@@ -11,3 +11,8 @@ LOGIN_FAILED_USERS = [
 ]
 
 PASSWORD = "secret_sauce"
+
+BACKPACK = {
+    "id": "sauce-labs-backpack",
+    "name": "Sauce Labs Backpack"
+}
