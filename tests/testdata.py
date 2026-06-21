@@ -12,7 +12,18 @@ LOGIN_FAILED_USERS = [
 
 PASSWORD = "secret_sauce"
 
+USER_DATA = {
+    "first_name": "John",
+    "last_name": "Doe",
+    "postal_code": "12345",
+}
+
 BACKPACK = {
     "id": "sauce-labs-backpack",
     "name": "Sauce Labs Backpack"
+}
+
+BIKE_LIGHT = {
+    "id": "sauce-labs-bike-light",
+    "name": "Sauce Labs Bike Light"
 }
