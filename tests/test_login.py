@@ -1,3 +1,4 @@
+from config import BASE_URL
 from testdata import LOGIN_SUCCESS_USERS, LOGIN_FAILED_USERS, PASSWORD
 import pytest
 
@@ -14,3 +15,9 @@ class TestLogin:
         logged_in(username, PASSWORD)
 
         assert "inventory" not in driver.current_url
+
+    def test_logout(self, driver, inventory_page):
+        inventory_page.click_burger_menu()
+        inventory_page.click_logout()
+
+        assert driver.current_url == BASE_URL

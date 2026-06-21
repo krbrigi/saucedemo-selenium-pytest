@@ -54,5 +54,5 @@ class InventoryPage(BasePage):
     def click_burger_menu(self):
         self.wait.until(EC.element_to_be_clickable(self.BURGER_MENU)).click()
 
-    def logout(self):
+    def click_logout(self):
         self.wait.until(EC.element_to_be_clickable(self.LOGOUT)).click()

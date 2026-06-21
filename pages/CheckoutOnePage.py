@@ -10,6 +10,7 @@ class CheckoutOnePage(BasePage):
     POSTAL_CODE = (By.ID, "postal-code")
     CONTINUE = (By.ID, "continue")
     CANCEL = (By.ID, "cancel")
+    ERROR_TEXT = (By.XPATH, "//div[@class='error-message-container error']/h3")
 
     def enter_first_name(self, firstname):
         self.wait.until(EC.visibility_of_element_located(self.FIRST_NAME)).send_keys(firstname)
@@ -32,5 +33,9 @@ class CheckoutOnePage(BasePage):
         self.enter_postal_code(postal_code)
         self.click_continue()
 
+    def get_error_message(self):
+        error_message =self.wait.until(EC.visibility_of_element_located(self.ERROR_TEXT))
+
+        return error_message.text
 
 
