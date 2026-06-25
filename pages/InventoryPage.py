@@ -11,6 +11,8 @@ class InventoryPage(BasePage):
     CART_BADGE = (By.CLASS_NAME, "shopping_cart_badge")
     BURGER_MENU = (By.ID, "react-burger-menu-btn")
     LOGOUT = (By.ID, "logout_sidebar_link")
+    ITEMS_NAME = (By.CLASS_NAME, "inventory_item_name")
+    ITEMS_PRICE = (By.CLASS_NAME, "inventory_item_price")
 
     def select_sorting(self, sorting_value):
         select_object = Select(
@@ -56,3 +58,21 @@ class InventoryPage(BasePage):
 
     def click_logout(self):
         self.wait.until(EC.element_to_be_clickable(self.LOGOUT)).click()
+
+    def get_items_names(self):
+        self.wait.until(
+            EC.presence_of_element_located(self.ITEMS_NAME)
+        )
+        items = self.driver.find_elements(*self.ITEMS_NAME)
+        product_names = [item.text for item in items]
+
+        return product_names
+
+    def get_items_prices(self):
+        self.wait.until(
+            EC.presence_of_element_located(self.ITEMS_PRICE)
+        )
+        items = self.driver.find_elements(*self.ITEMS_PRICE)
+        product_prices = [item.text for item in items]
+
+        return product_prices
