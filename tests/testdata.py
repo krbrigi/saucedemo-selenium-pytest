@@ -7,7 +7,8 @@ LOGIN_SUCCESS_USERS = [
 ]
 
 LOGIN_FAILED_USERS = [
-    "locked_out_user",
+    ("locked_out_user", "Epic sadface: Sorry, this user has been locked out."),
+    ("", "Epic sadface: Username is required")
 ]
 
 PASSWORD = "secret_sauce"
@@ -33,3 +34,4 @@ BIKE_LIGHT = {
     "id": "sauce-labs-bike-light",
     "name": "Sauce Labs Bike Light"
 }
+

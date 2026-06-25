@@ -11,7 +11,6 @@ class LoginPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
 
-
     def enter_username(self,username):
         self.wait.until(EC.visibility_of_element_located(self.USERNAME)).send_keys(username)
 

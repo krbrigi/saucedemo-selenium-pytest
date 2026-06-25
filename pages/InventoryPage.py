@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
+import allure
 
 from pages.BasePage import BasePage
 
@@ -23,6 +24,7 @@ class InventoryPage(BasePage):
 
         select_object.select_by_value(sorting_value)
 
+    @allure.step("Add product to the cart. ID: {product_id}")
     def add_product_to_cart(self, product_id):
         locator = (By.ID, f"add-to-cart-{product_id}")
 
@@ -32,6 +34,7 @@ class InventoryPage(BasePage):
 
         add_to_cart_button.click()
 
+    @allure.step("Remove product from the cart. ID: {product_id}")
     def remove_product_from_cart(self, product_id):
         locator = (By.ID, f"remove-{product_id}")
 
@@ -53,9 +56,11 @@ class InventoryPage(BasePage):
 
         return int(badges[0].text)
 
+    @allure.step("Click on burger menu")
     def click_burger_menu(self):
         self.wait.until(EC.element_to_be_clickable(self.BURGER_MENU)).click()
 
+    @allure.step("Click on 'Logout'")
     def click_logout(self):
         self.wait.until(EC.element_to_be_clickable(self.LOGOUT)).click()
 
