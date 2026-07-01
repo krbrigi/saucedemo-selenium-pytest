@@ -1,5 +1,6 @@
 import allure
 import pytest
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from pages.LoginPage import LoginPage
@@ -14,8 +15,14 @@ def driver():
 
     options.add_argument("--guest")
     options.add_argument("--lang=en")
+
+    if os.getenv("CI"):
+        options.add_argument("--headless=new")
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+
     driver = webdriver.Chrome(options=options)
-    driver.maximize_window()
 
     yield driver
 
