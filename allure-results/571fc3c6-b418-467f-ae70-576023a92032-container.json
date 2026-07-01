@@ -1,0 +1,1 @@
+{"uuid": "f84b2036-2aec-47f3-938f-b1de7488f8d7", "children": ["58b6604c-2bc8-445e-a88e-64196fdd90cf"], "befores": [{"name": "inventory_page", "status": "passed", "start": 1782410588682, "stop": 1782410592837}], "afters": [{"name": "inventory_page::<lambda>", "start": 1782410592989}], "start": 1782410588682, "stop": 1782410592989}
