@@ -37,8 +37,15 @@ jobs:
         run: |
           python -m pytest --alluredir=allure-results
           
-      - name: Allure Report Action
-        uses: MishaKav/allure-results-action@v2
+      - name: Load Allure history
+        uses: actions/checkout@v4
+        if: always()
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Build Allure Report
+        uses: simple-elf/allure-report-action@v1.9
         if: always()
         with:
           allure_results: allure-results
@@ -51,5 +58,3 @@ jobs:
         with:
           name: allure-report
           path: allure-history
-
-
