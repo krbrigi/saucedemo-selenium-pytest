@@ -1,5 +1,8 @@
 # SauceDemo Selenium Project
 
+![CI Pipeline Status](https://github.com)
+[![Allure Report](https://shields.io)](https://github.io)
+
 ## Project overview
 UI test automation project using Selenium and Pytest with Page Object Model
 
