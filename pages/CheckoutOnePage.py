@@ -12,13 +12,16 @@ class CheckoutOnePage(BasePage):
     CANCEL = (By.ID, "cancel")
 
     def enter_first_name(self, firstname):
-        self.wait.until(EC.visibility_of_element_located(self.FIRST_NAME)).send_keys(firstname)
+        self.wait.until(EC.visibility_of_element_located(
+            self.FIRST_NAME)).send_keys(firstname)
 
     def enter_last_name(self, lastname):
-        self.wait.until(EC.visibility_of_element_located(self.LAST_NAME)).send_keys(lastname)
+        self.wait.until(EC.visibility_of_element_located(
+            self.LAST_NAME)).send_keys(lastname)
 
     def enter_postal_code(self, postalcode):
-        self.wait.until(EC.visibility_of_element_located(self.POSTAL_CODE)).send_keys(postalcode)
+        self.wait.until(EC.visibility_of_element_located(
+            self.POSTAL_CODE)).send_keys(postalcode)
 
     def click_continue(self):
         self.wait.until(EC.element_to_be_clickable(self.CONTINUE)).click()
@@ -31,6 +34,3 @@ class CheckoutOnePage(BasePage):
         self.enter_last_name(lastname)
         self.enter_postal_code(postal_code)
         self.click_continue()
-
-
-

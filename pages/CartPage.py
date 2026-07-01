@@ -27,7 +27,6 @@ class CartPage(BasePage):
 
         button_continue.click()
 
-
     def checkout(self):
         button_checkout = self.wait.until(
             EC.element_to_be_clickable(self.CHECKOUT)

@@ -31,4 +31,3 @@ class CheckoutTwoPage(BasePage):
         )
 
         finish_button.click()
-

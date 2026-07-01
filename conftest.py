@@ -9,6 +9,7 @@ from pages.CartPage import CartPage
 from utils.config import BASE_URL
 from tests.testdata import PASSWORD
 
+
 @pytest.fixture()
 def driver():
     options = Options()
@@ -28,6 +29,7 @@ def driver():
 
     driver.quit()
 
+
 @pytest.fixture()
 def logged_in(driver):
     def _login(username, password):
@@ -39,11 +41,13 @@ def logged_in(driver):
 
     return _login
 
+
 @pytest.fixture()
 def inventory_page(driver, logged_in):
     logged_in("standard_user", PASSWORD)
 
     return InventoryPage(driver)
+
 
 @pytest.fixture()
 def cart_with_product(inventory_page):

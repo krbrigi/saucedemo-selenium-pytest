@@ -18,7 +18,7 @@ class TestCart:
     @allure.story("Navigation Flow")
     @allure.title("Return to inventory page using 'Continue Shopping' button")
     @allure.tag("navigation")
-    def test_continue_shopping(self,driver, cart_with_product):
+    def test_continue_shopping(self, driver, cart_with_product):
         cart_page = cart_with_product(BACKPACK["id"])
         cart_page.continue_shopping()
 
@@ -32,4 +32,3 @@ class TestCart:
         cart_page.checkout()
 
         assert driver.current_url == f"{BASE_URL}checkout-step-one.html"
-

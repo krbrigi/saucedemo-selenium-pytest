@@ -34,4 +34,3 @@ BIKE_LIGHT = {
     "id": "sauce-labs-bike-light",
     "name": "Sauce Labs Bike Light"
 }
-

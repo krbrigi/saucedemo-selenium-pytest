@@ -1,6 +1,7 @@
 from testdata import BACKPACK, BIKE_LIGHT
 import allure
 
+
 @allure.feature("Inventory")
 @allure.severity(allure.severity_level.CRITICAL)
 @allure.tag("inventory")
@@ -93,4 +94,3 @@ class TestInventory:
         prices = [float(price[1:]) for price in item_prices]
 
         assert prices == sorted(prices, reverse=True)
-
