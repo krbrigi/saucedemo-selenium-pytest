@@ -3,6 +3,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class BasePage:
     ERROR_TEXT = (By.XPATH, "//div[@class='error-message-container error']/h3")
 
@@ -13,7 +14,6 @@ class BasePage:
     def open(self, url):
         self.driver.get(url)
 
-
     def get_current_url(self):
         return self.driver.current_url
 
@@ -22,5 +22,6 @@ class BasePage:
         self.driver.save_screenshot(f"screenshot_{timestamp}.png")
 
     def get_error_message(self):
-        error_message =self.wait.until(EC.visibility_of_element_located(self.ERROR_TEXT))
+        error_message = self.wait.until(
+            EC.visibility_of_element_located(self.ERROR_TEXT))
         return error_message.text
