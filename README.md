@@ -1,6 +1,8 @@
 # SauceDemo Selenium Project
 
 [![Test Project Saucedemo](https://github.com/krbrigi/saucedemo-selenium-pytest/actions/workflows/tests.yml/badge.svg)](https://github.com/krbrigi/saucedemo-selenium-pytest/actions/workflows/tests.yml)
+[![Static Badge](https://img.shields.io/badge/Report-Allure-orange)](https://krbrigi.github.io/saucedemo-selenium-pytest/)
+
 
 
 ## Project overview
