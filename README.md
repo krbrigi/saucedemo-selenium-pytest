@@ -1,7 +1,7 @@
 # SauceDemo Selenium Project
 
 [![Test Project Saucedemo](https://github.com/krbrigi/saucedemo-selenium-pytest/actions/workflows/tests.yml/badge.svg)](https://github.com/krbrigi/saucedemo-selenium-pytest/actions/workflows/tests.yml)
-[![Allure Report](https://img.shields.io)](https://krbrigi.github.io)
+
 
 ## Project overview
 UI test automation project using Selenium and Pytest with Page Object Model
